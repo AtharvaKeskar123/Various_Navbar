@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Navbar3.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="content">
+            <div class="logo"><a href="#">Coding</a></div>
+            <ul class="menu-list">
+                <div class="icon cancel-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Features</a></li>
+                <li><a href="">Contact</a></li>      
+            </ul>
+            <div class="icon menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    <div class="banner"></div>
+     <div class="about">
+         <div class="content">
+             <div class="title">
+<p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit ex perferendis odit maiores voluptates saepe quis minus quasi aspernatur accusamus? Aut illo aspernatur sit architecto eius porro officia error aperiam.
+</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ex voluptatibus quo, deleniti voluptas laboriosam corrupti aperiam error ut tempora. Laboriosam esse natus, quasi est facilis commodi maxime, repellendus assumenda eum, vero animi fuga? Maiores tenetur placeat, itaque ducimus libero delectus recusandae quia ad, laboriosam facilis quos perferendis quod similique, nisi ipsam voluptatum illum sunt cum. Voluptatem debitis aperiam culpa eligendi deleniti, maiores odio itaque repellat mollitia facere iste pariatur officia nisi. Quos quasi reprehenderit alias labore nemo, distinctio quaerat sint libero saepe eum numquam ex praesentium. Aspernatur ex harum, dolor beatae consequatur quasi nesciunt eaque aperiam dicta autem velit.</p>
+             </div>
+         </div>
+     </div>
+     <script>
+         const body =document.querySelector("body");
+        
+        const navbar =document.querySelector(".navbar");
+         const menu =document.querySelector(".menu-list");
+         const menuBtn =document.querySelector(".menu-btn");
+         const cancelbtn =document.querySelector(".cancel-btn");
+         menuBtn.onclick = ()=>{
+            menu.classList.add("active");
+            menuBtn.classList.add("hide");
+            body.classList.add("disabledScroll");     
+         }
+         cancelbtn.onclick = ()=>{
+            menu.classList.remove("active");    
+            menuBtn.classList.remove("hide");
+            body.classList.remove("disabledScroll");    
+         }
+         window.onscroll = ()=>{
+             this.scrollY > 20 ?  navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+         }
+
+     </script>
+</body>
+</html>
